@@ -8,25 +8,19 @@ import java.io.*;
 
 class Function {  
   String LongestWord(String sen) { 
-  
-    // code goes here   
-       
-    return sen;
-    
+		String[] text = sen.trim().split("\\s+");
+		sen = "";
+		
+		for (String str : text){
+			if (str.length() > sen.length()){
+				sen = str;
+			}
+		}			
+		return sen;
   } 
   
   public static void main (String[] args) {  
-    // the function call should go here    
-   
+		System.out.println(LongestWord("some words here")); 
   }   
   
 }
-
-
-
-
-
-
-
-
-  
