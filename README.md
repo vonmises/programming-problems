@@ -1,5 +1,5 @@
-##MS-3-Toy-Problems
-  Toy Problems for Moringa School Cohort 3
+##MS-4-Toy-Problems
+  Toy Problems for Moringa School Cohort 4
 
   Each toy problem directory contains all the needed files for completing the problem.
 
