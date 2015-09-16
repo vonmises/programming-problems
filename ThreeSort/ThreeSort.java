@@ -15,3 +15,16 @@
 // Example:
 // ThreeSort.threeSort(9,4,6); // [4,6,9]
 // ThreeSort.threeSort(3,2,1); // [1,2,3]
+public class ThreeSort {
+	public static void main(String[] args){
+		int[] int_array = {9, 4, 6};
+		int_array = threeSort(int_array);
+		
+		System.out.print(Arrays.toString(int_array));
+	}
+
+	private static int[] threeSort(int[] int_array) {
+		Arrays.sort(int_array);
+		return int_array;
+	}
+}
