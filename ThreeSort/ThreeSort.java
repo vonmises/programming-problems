@@ -15,6 +15,8 @@
 // Example:
 // ThreeSort.threeSort(9,4,6); // [4,6,9]
 // ThreeSort.threeSort(3,2,1); // [1,2,3]
+import java.util.Arrays;
+
 public class ThreeSort {
 	public static void main(String[] args){
 		int[] int_array = {9, 4, 6};
