@@ -9,7 +9,7 @@ import java.io.*;
 class Function {  
     static int adds_n(int num) {
         if (num > 1000){
-            throw new IllegalArgumentException("Provide a number less than 1000");
+            throw new IllegalArgumentException("Number can not be greater than 1000");
         }
         int accumulator = 0;
         for(int i = 1; i <= num; i++){
