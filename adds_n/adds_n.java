@@ -7,18 +7,22 @@ import java.util.*;
 import java.io.*;
 
 class Function {  
-  static int adds_n(int num) { 
-       
-    return num;
-    
-  } 
-  
-  public static void main (String[] args) {  
-    // keep this function call here     
-    Scanner  s = new Scanner(System.in);
-    System.out.print(adds_n(s.nextLine())); 
-  }   
-  
+    static int adds_n(int num) {
+        int accumulator = 0;
+        for(int i = 1; i <= num; i++){
+            accumulator += i;
+        }
+        num = accumulator;
+        return num;
+    }
+
+    public static void main (String[] args) {
+        // keep this function call here
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(adds_n(Integer.parseInt(scanner.nextLine())));
+
+        scanner.close();
+    }
 }
 
 
