@@ -7,7 +7,7 @@ import java.util.*;
 import java.io.*;
 
 class Function {  
-  int adds_n(int num) { 
+  static int adds_n(int num) { 
        
     return num;
     
@@ -16,8 +16,7 @@ class Function {
   public static void main (String[] args) {  
     // keep this function call here     
     Scanner  s = new Scanner(System.in);
-    Function c = new Function();
-    System.out.print(c.adds_n(s.nextLine())); 
+    System.out.print(adds_n(s.nextLine())); 
   }   
   
 }
