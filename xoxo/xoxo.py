@@ -5,9 +5,18 @@
 # no punctuation or numbers.
 # For example: if str is "xooxxxxooxo" then the output should return false because there are 6 x's and 5 o's.
 
-def xoxo(str):
-  # code goes here
+def Xoxo(str):
+    # code goes here
+    x = 0
+    o = 0
+    
+    for letter in str:
+        if letter == "x":
+            x += 1
+        elif letter == "o":
+            o += 1
 
+    return x==o
 
 # keep the function call
 print Xoxo("have fun..xoxo")
