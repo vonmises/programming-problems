@@ -15,7 +15,7 @@ def is_paren_balanced(str):
         char = str[index]
         if char == "(":
             stack.append(char)
-        else:
+        elif char == ")":
             if len(stack) == 0:
                 balanced = False
             else:
@@ -25,4 +25,4 @@ def is_paren_balanced(str):
 
     return balanced and len(stack) == 0
 
-print(is_paren_balanced('((()))'))
+print(is_paren_balanced('(a(b(c)d)e)'))
