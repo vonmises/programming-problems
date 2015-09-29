@@ -6,11 +6,6 @@
 #NB do not use the swapcase python method.
 
 def swap_case(str):
-    temp = ""
+    return "".join([char.lower() if char.isupper() else char.upper() for char in str])
 
-    for char in str:
-        temp += char.lower() if char.isupper() else char.upper()
-
-    return temp
-
-print(swap_case("teST"))
+print(swap_case("othEr"))
