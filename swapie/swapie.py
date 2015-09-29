@@ -4,3 +4,4 @@
 #Let numbers and symbols stay the way they are.
 
 #NB do not use the swapcase python method.
+
