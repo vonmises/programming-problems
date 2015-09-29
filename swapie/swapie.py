@@ -4,3 +4,13 @@
 #Let numbers and symbols stay the way they are.
 
 #NB do not use the swapcase python method.
+
+def swap_case(str):
+    temp = ""
+
+    for char in str:
+        temp += char.lower() if char.isupper() else char.upper()
+
+    return temp
+
+print(swap_case("teST"))
