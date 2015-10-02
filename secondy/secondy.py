@@ -10,9 +10,6 @@ def Secondy(lis):
     if len(lis) == 2:
         return lis[0], lis[1]
     else:
-        if lis[1] != lis[-2]:
-            return lis[1], lis[-2]
-        else:
-            return lis[1]
+        return lis[1], lis[-2]
 
 print(Secondy([7, 7, 7, 12, 12, 98, 106]))
