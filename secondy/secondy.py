@@ -4,7 +4,15 @@
 # The list will not be empty and will contain at least 2 numbers. It can get tricky if there's just two numbers!
 
 def Secondy(lis):
-  # code goes here
+    lis = list(set(lis))
+    lis.sort()
 
+    if len(lis) == 2:
+        return lis[0], lis[1]
+    else:
+        if lis[1] != lis[-2]:
+            return lis[1], lis[-2]
+        else:
+            return lis[1]
 
-# keep this function call below here
+print(Secondy([7, 7, 7, 12, 12, 98, 106]))
