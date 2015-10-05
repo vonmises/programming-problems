@@ -12,3 +12,12 @@
 # translateRomanNumeral("IV") # 4
 #
 # You should return `nil` on invalid input.
+import roman
+
+def arabic_numerals(roman_numerals):
+    try:
+        return roman.fromRoman(roman_numerals.upper())
+    except:
+        return None
+
+print(arabic_numerals("abc"))
