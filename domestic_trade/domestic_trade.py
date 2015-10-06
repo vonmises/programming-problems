@@ -30,6 +30,25 @@
 # {:total_KSH=> 13290, :largest=> 'Nairobi'}.
 
 def domestic_trade(itemId):
-  # Your Code Here!
+    input_file = open("TRANS.csv", "r")
+    transactions = input_file.readlines()
+    input_file.close()
 
-domestic_trade("DM1724")
+    total, amount, temp = 0, 0, 0
+    largest_store = ""
+
+    for transaction in transactions:
+        columns = transaction.split(",")
+
+        if itemId in columns[1]:
+            temp = int(columns[2][:-5])
+            total += temp
+
+            if temp > amount:
+                amount = temp
+                largest_store = columns[0]
+
+    print("total KSH => " + str(total) + ", " +
+          "largest => " + largest_store)
+
+domestic_trade("DM1182")
