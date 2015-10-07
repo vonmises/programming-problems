@@ -31,21 +31,21 @@
 
 def domestic_trade(itemId):
     input_file = open("TRANS.csv", "r")
-    transactions = input_file.readlines()
+    store_sales = input_file.readlines()
     input_file.close()
 
-    total, amount, temp = 0, 0, 0
+    amount, max_amount, total = 0, 0, 0
     largest_store = ""
 
-    for transaction in transactions:
-        columns = transaction.split(",")
+    for store_sale in store_sales:
+        columns = store_sale.split(",")
 
         if itemId in columns[1]:
-            temp = int(columns[2][:-5])
-            total += temp
+            amount = int(columns[2][:-5])
+            total += amount
 
-            if temp > amount:
-                amount = temp
+            if amount > max_amount:
+                max_amount = amount
                 largest_store = columns[0]
 
     print("total KSH => " + str(total) + ", " +
