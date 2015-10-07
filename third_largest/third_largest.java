@@ -4,3 +4,24 @@
 // your output should be world because "before" is 6 letters long, and "hello" and "world" are both 5, but the output should be world because it appeared as the last 5 letter word in the array. If strArr was ["hello", "world", "after", "all"] the output should be after because the first three words are all 5 letters long, so return the last one. The array will have at least three strings and each string will only contain letters.
 
 // use the main method only for calling the function where your logic lies. :-)
+
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class ThirdGreatest {
+
+    public static void main(String[] args) {
+        thirdGreatest(new String[]{"hello", "world", "before", "all"});
+    }
+
+    private static void thirdGreatest(String[] text) {
+        Arrays.sort(text, new StringLengthComparator());
+        System.out.println(text[2]);
+    }
+}
+
+class StringLengthComparator implements Comparator<String> {
+      public int compare(String string1, String string2) {
+        return Integer.compare(string2.length(), string1.length());
+      }
+}
