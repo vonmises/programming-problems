@@ -38,6 +38,16 @@
 
 # Bonus: Try to avoid hard-coding the number of button presses for each letter!
 
+KEY_PRESSES = { "ADGJMPTW1*# ": 1, "BEHKNQUX0": 2, "CFILORVY": 3, "23456789Z": 4 }
 
-def presses(str):
-  # Your Code Here!
+def presses(string):
+    total_presses = 0
+
+    for char in string.upper():
+        for key, value in KEY_PRESSES.items():
+            if char in key:
+                total_presses += value
+
+    print(total_presses)
+
+presses("v8")
