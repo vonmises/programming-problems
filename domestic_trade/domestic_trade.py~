@@ -34,4 +34,20 @@
 # {:total_KSH=> 13290, :largest=> 'Nairobi'}.
 
 
+def domestic_trade(itemId):
+  # Your Code Here!
+    import csv
+  # Open csv file and assign it to variable opencsv
+    with open('TRANS.csv', 'r') as csvfile:
+    	total = 0
+  # Go through the csv file
+        readCSV = csv.reader(csvfile, delimiter=',')
+  # Goes through the rows in the csv file
+        for row in readCSV:
+            for field in row:
+                if field == itemId:
+           			total += str(row[2])
+           	print total
 
+domestic_trade("DM1724")
+csvfile.close()
